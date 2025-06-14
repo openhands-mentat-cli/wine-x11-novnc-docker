@@ -8,7 +8,7 @@ ENV LANGUAGE en_US.UTF-8
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get -y install python3 python-is-python3 xvfb x11vnc xdotool wget tar supervisor net-tools gnupg2 curl software-properties-common && \
-    apt-get -y install xfce4 xfce4-goodies firefox fonts-liberation fonts-dejavu-core fonts-freefont-ttf && \
+    apt-get -y install xfce4 xfce4-goodies firefox fonts-liberation fonts-dejavu-core fonts-freefont-ttf onboard && \
     echo '$$Hello1$$' > /root/x11vnc_password.txt && \
     wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' | tee /etc/apt/sources.list.d/winehq.list && \
@@ -17,6 +17,7 @@ RUN dpkg --add-architecture i386 && \
     apt-get -y full-upgrade && apt-get clean && rm -rf /var/lib/apt/lists/*
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD supervisord-wine.conf /etc/supervisor/conf.d/supervisord-wine.conf
+ADD supervisord-onboard.conf /etc/supervisor/conf.d/supervisord-onboard.conf
 ADD start.sh /root/start.sh
 ADD healthcheck.sh /root/healthcheck.sh
 ADD install-roblox-studio.sh /root/install-roblox-studio.sh
