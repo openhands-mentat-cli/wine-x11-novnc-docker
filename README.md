@@ -15,7 +15,7 @@ This container runs:
 * **XFCE4** - Modern, lightweight desktop environment
 * **Firefox** - Modern web browser
 * **Wine 64-bit** - Windows compatibility layer
-* **Roblox Studio** - Game development environment (auto-installed)
+* **Roblox Studio (Vinegar)** - Optimized Roblox development environment
 
 This is a [trusted build](https://registry.hub.docker.com/u/solarkennedy/wine-x11-novnc-docker/)
 on the Docker Hub.
@@ -55,21 +55,28 @@ The application automatically handles Railway's `PORT` environment variable. No 
 
 In your web browser, enter `$$Hello1$$` as the password, and you will see a modern XFCE desktop with:
 
-- 🎮 **Roblox Studio** - Ready for game development (automatically installed)
+- 🎮 **Roblox Studio (Vinegar)** - Optimized game development with better compatibility
 - 🌐 **Firefox Browser** - Modern web browsing experience  
 - ⌨️ **Virtual Keyboard** - On-screen keyboard for mobile/touch devices
 - 🖥️ **XFCE Desktop** - Clean, modern interface
 - 🍷 **Wine 64-bit** - Run Windows applications seamlessly
 
-## 🎮 Using Roblox Studio
+## 🎮 Using Roblox Studio (Vinegar)
 
-Roblox Studio is automatically installed and configured:
+Roblox Studio is automatically installed via Vinegar for optimal compatibility:
 
 1. **Access the desktop** via noVNC in your web browser
-2. **Find Roblox Studio** on the desktop or in the applications menu
-3. **Start developing** your games immediately!
+2. **Launch "Roblox Studio (Vinegar)"** from the desktop shortcut
+3. **Start developing** your games with superior performance!
 
-The container includes all necessary Windows components (Visual C++ Runtime, .NET Framework) for Roblox Studio to run smoothly.
+✨ **Vinegar Benefits:**
+- **Better anti-cheat compatibility** - No issues with Roblox's security systems
+- **Optimized Wine configuration** - Specifically tuned for Roblox applications
+- **FPS unlocker support** - Enhanced performance capabilities
+- **Automatic updates** - Keeps Roblox and Wine components current
+- **Superior stability** - Much more reliable than manual Wine setup
+
+🎮 **Bonus**: The container also includes "Roblox Player (Vinegar)" for playing games!
 
 ## ⌨️ Using the Virtual Keyboard
 
@@ -96,7 +103,7 @@ This container provides a complete development environment. You can:
 
 - ✅ **64-bit Wine** for modern application compatibility
 - ✅ **Modern XFCE desktop** instead of basic window manager
-- ✅ **Pre-installed Roblox Studio** ready for game development
+- ✅ **Roblox Studio via Vinegar** with superior compatibility and performance
 - ✅ **Firefox browser** for web access
 - ✅ **Virtual keyboard (Onboard)** for mobile/touch device support
 - ✅ **Automatic Windows component installation** (fonts, runtimes)
