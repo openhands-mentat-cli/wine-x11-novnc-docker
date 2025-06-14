@@ -30,6 +30,56 @@ EOF
 
 chmod +x "/root/Desktop/Firefox.desktop"
 
+# Create Virtual Keyboard shortcut
+cat > "/root/Desktop/Virtual Keyboard.desktop" << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Virtual Keyboard
+Comment=On-screen keyboard for touch devices
+GenericName=Virtual Keyboard
+Keywords=keyboard;touch;onscreen;
+Exec=onboard
+Terminal=false
+Icon=onboard
+Categories=Utility;Accessibility;
+EOF
+
+chmod +x "/root/Desktop/Virtual Keyboard.desktop"
+
+# Configure onboard virtual keyboard settings
+mkdir -p /root/.config/onboard
+cat > "/root/.config/onboard/onboard.conf" << EOF
+[main]
+layout=Compact
+theme=Droid
+key-label-font=Ubuntu
+show-status-icon=True
+show-tooltips=True
+auto-show-enabled=True
+auto-hide-enabled=True
+docking-enabled=True
+docking-edge=bottom
+window-state-sticky=True
+window-decoration=False
+force-to-top=True
+
+[window]
+enable-inactive-transparency=False
+inactive-transparency=50.0
+transparency=0.0
+
+[keyboard]
+touch-input=scanning
+show-click-buttons=False
+sticky-behaviour=True
+audio-feedback-enabled=False
+
+[auto-show]
+enabled=True
+hide-on-key-press=True
+EOF
+
 # Configure XFCE settings for a modern look
 mkdir -p /root/.config/xfce4/xfconf/xfce-perchannel-xml
 
