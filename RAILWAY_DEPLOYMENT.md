@@ -35,7 +35,7 @@ This document provides a comprehensive guide for deploying the Wine+X11+noVNC Do
 
 ### 3. Access Your Application
 - Use the Railway-provided URL
-- Enter the container hostname as VNC password
+- Enter `$$Hello1$$` as the VNC password
 - You should see Wine Explorer running in your browser
 
 ## Configuration Details
@@ -125,7 +125,7 @@ redirect_stderr=true
 
 ## Security Considerations
 
-- VNC password is the container hostname (visible in Railway logs)
+- VNC password is set to `$$Hello1$$`
 - No SSL/TLS encryption on VNC connection (Railway provides HTTPS termination)
 - Consider implementing authentication for production use
 - Wine applications run as root (not recommended for production)
