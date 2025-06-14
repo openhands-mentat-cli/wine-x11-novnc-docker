@@ -16,8 +16,13 @@ sed -i "s/--listen 8080/--listen $PORT/g" /etc/supervisor/conf.d/supervisord.con
 
 # Initialize wine prefix if it doesn't exist
 if [ ! -d "$WINEPREFIX" ]; then
-    echo "Initializing Wine prefix at $WINEPREFIX"
+    echo "Initializing 64-bit Wine prefix at $WINEPREFIX"
+    export WINEARCH=win64
     /usr/bin/wineboot --init
+    
+    # Install basic Windows components for better compatibility
+    echo "Installing basic Windows components..."
+    /usr/bin/winetricks -q corefonts vcrun2019 || echo "Some components may have failed to install, continuing..."
 fi
 
 # Start supervisord
