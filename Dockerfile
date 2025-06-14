@@ -7,7 +7,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN dpkg --add-architecture i386 && \
-    apt-get update && apt-get -y install python3 python-is-python3 xvfb x11vnc xdotool wget tar supervisor net-tools gnupg2 curl software-properties-common && \
+    apt-get update && apt-get -y install python3 python-is-python3 xvfb x11vnc xdotool wget tar supervisor net-tools gnupg2 curl software-properties-common x11-utils && \
     apt-get -y install xfce4 xfce4-goodies firefox fonts-liberation fonts-dejavu-core fonts-freefont-ttf onboard && \
     echo '$$Hello1$$' > /root/x11vnc_password.txt && \
     wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
