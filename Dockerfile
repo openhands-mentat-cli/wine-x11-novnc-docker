@@ -20,10 +20,9 @@ ADD supervisord-wine.conf /etc/supervisor/conf.d/supervisord-wine.conf
 ADD supervisord-onboard.conf /etc/supervisor/conf.d/supervisord-onboard.conf
 ADD start.sh /root/start.sh
 ADD healthcheck.sh /root/healthcheck.sh
-ADD install-roblox-studio.sh /root/install-roblox-studio.sh
 ADD install-vinegar.sh /root/install-vinegar.sh
 ADD setup-desktop.sh /root/setup-desktop.sh
-RUN chmod +x /root/start.sh /root/healthcheck.sh /root/install-roblox-studio.sh /root/install-vinegar.sh /root/setup-desktop.sh
+RUN chmod +x /root/start.sh /root/healthcheck.sh /root/install-vinegar.sh /root/setup-desktop.sh
 
 ENV WINEPREFIX /root/prefix64
 ENV WINEARCH win64
