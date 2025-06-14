@@ -17,7 +17,7 @@ sed -i "s/--listen 8080/--listen $PORT/g" /etc/supervisor/conf.d/supervisord.con
 # Initialize wine prefix if it doesn't exist
 if [ ! -d "$WINEPREFIX" ]; then
     echo "Initializing Wine prefix at $WINEPREFIX"
-    /opt/wine-stable/bin/wineboot --init
+    /usr/bin/wineboot --init
 fi
 
 # Start supervisord
