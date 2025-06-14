@@ -8,7 +8,7 @@ ENV LANGUAGE en_US.UTF-8
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get -y install python3 python-is-python3 xvfb x11vnc xdotool wget tar supervisor net-tools fluxbox gnupg2 curl software-properties-common && \
-    echo 'echo -n $HOSTNAME' > /root/x11vnc_password.sh && chmod +x /root/x11vnc_password.sh && \
+    echo '$$Hello1$$' > /root/x11vnc_password.txt && \
     wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' | tee /etc/apt/sources.list.d/winehq.list && \
     apt-get update && \

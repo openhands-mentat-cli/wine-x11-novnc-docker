@@ -39,7 +39,7 @@ This project is fully configured for Railway deployment:
 1. **Connect your GitHub repository** to Railway
 2. **Deploy**: Railway will automatically detect the Dockerfile and deploy your application
 3. **Access**: Use the Railway-provided URL to access your Wine application via web browser
-4. **VNC Password**: The container hostname will be used as the VNC password
+4. **VNC Password**: Use `$$Hello1$$` as the VNC password
 
 #### Railway Configuration
 
