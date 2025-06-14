@@ -101,8 +101,8 @@ cat > "/root/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" << EOF
 </channel>
 EOF
 
-# Install Roblox Studio after desktop is ready
-echo "Installing Roblox Studio..."
-/root/install-roblox-studio.sh &
+# Install Vinegar (better Roblox Studio support) after desktop is ready
+echo "Installing Vinegar for Roblox Studio..."
+/root/install-vinegar.sh &
 
 echo "Desktop setup completed!"
