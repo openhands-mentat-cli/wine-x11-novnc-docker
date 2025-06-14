@@ -3,18 +3,19 @@
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/solarkennedy/wine-x11-novnc-docker/latest)
 ![Docker Pulls](https://img.shields.io/docker/pulls/solarkennedy/wine-x11-novnc-docker)
 
-Not a very good name, is it?
+🎮 **Modern Wine Desktop with Roblox Studio Support**
 
-Ever wanted to containerize your wine applications and access them via
-a web browser? No? Neither did I!
+A containerized Wine environment accessible via web browser, featuring a modern XFCE desktop and pre-installed Roblox Studio for game development!
 
 This container runs:
 
-* Xvfb - X11 in a virtual framebuffer
-* x11vnc - A VNC server that scrapes the above X11 server
-* [noNVC](https://kanaka.github.io/noVNC/) - A HTML5 canvas vnc viewer
-* Fluxbox - a small window manager
-* Explorer.exe - to demo that it works
+* **Xvfb** - X11 in a virtual framebuffer
+* **x11vnc** - A VNC server that scrapes the above X11 server
+* **[noVNC](https://kanaka.github.io/noVNC/)** - A HTML5 canvas VNC viewer
+* **XFCE4** - Modern, lightweight desktop environment
+* **Firefox** - Modern web browser
+* **Wine 64-bit** - Windows compatibility layer
+* **Roblox Studio** - Game development environment (auto-installed)
 
 This is a [trusted build](https://registry.hub.docker.com/u/solarkennedy/wine-x11-novnc-docker/)
 on the Docker Hub.
@@ -52,15 +53,37 @@ This project is fully configured for Railway deployment:
 
 The application automatically handles Railway's `PORT` environment variable. No additional configuration needed.
 
-In your web browser, type the container ID as password, and then you should see the default application, explorer.exe:
+In your web browser, enter `$$Hello1$$` as the password, and you will see a modern XFCE desktop with:
 
-![Explorer Screenshot](https://raw.githubusercontent.com/solarkennedy/wine-x11-novnc-docker/master/screenshot.png)
+- 🎮 **Roblox Studio** - Ready for game development (automatically installed)
+- 🌐 **Firefox Browser** - Modern web browsing experience  
+- 🖥️ **XFCE Desktop** - Clean, modern interface
+- 🍷 **Wine 64-bit** - Run Windows applications seamlessly
 
-## Modifying
+## 🎮 Using Roblox Studio
 
-This is a base image. You should fork or use this base image to run your own wine programs?
+Roblox Studio is automatically installed and configured:
 
-## Issues
+1. **Access the desktop** via noVNC in your web browser
+2. **Find Roblox Studio** on the desktop or in the applications menu
+3. **Start developing** your games immediately!
 
-* Wine could be optimized a bit
-* Fluxbox could be skinned or reduced
+The container includes all necessary Windows components (Visual C++ Runtime, .NET Framework) for Roblox Studio to run smoothly.
+
+## 🛠️ Customization
+
+This container provides a complete development environment. You can:
+
+- **Install additional software** using `apt` (Linux) or through Wine (Windows apps)
+- **Customize the XFCE desktop** environment to your preferences
+- **Add your own applications** by modifying the Docker image
+- **Use Firefox** to browse documentation, tutorials, or the Roblox Developer Hub
+
+## ✨ Features
+
+- ✅ **64-bit Wine** for modern application compatibility
+- ✅ **Modern XFCE desktop** instead of basic window manager
+- ✅ **Pre-installed Roblox Studio** ready for game development
+- ✅ **Firefox browser** for web access
+- ✅ **Automatic Windows component installation** (fonts, runtimes)
+- ✅ **Railway.com deployment ready**
