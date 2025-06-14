@@ -57,6 +57,7 @@ In your web browser, enter `$$Hello1$$` as the password, and you will see a mode
 
 - 🎮 **Roblox Studio** - Ready for game development (automatically installed)
 - 🌐 **Firefox Browser** - Modern web browsing experience  
+- ⌨️ **Virtual Keyboard** - On-screen keyboard for mobile/touch devices
 - 🖥️ **XFCE Desktop** - Clean, modern interface
 - 🍷 **Wine 64-bit** - Run Windows applications seamlessly
 
@@ -69,6 +70,18 @@ Roblox Studio is automatically installed and configured:
 3. **Start developing** your games immediately!
 
 The container includes all necessary Windows components (Visual C++ Runtime, .NET Framework) for Roblox Studio to run smoothly.
+
+## ⌨️ Using the Virtual Keyboard
+
+Perfect for mobile devices, tablets, and touch screens:
+
+1. **Desktop shortcut** - Click the "Virtual Keyboard" icon on the desktop
+2. **Auto-show** - Keyboard appears automatically when you click text fields
+3. **Touch-friendly** - Optimized for touch input and mobile devices
+4. **Customizable** - Resize and position the keyboard as needed
+5. **Smart hide** - Automatically hides when not needed to save screen space
+
+**Mobile tip**: The virtual keyboard makes Roblox Studio development possible on tablets and phones!
 
 ## 🛠️ Customization
 
@@ -85,5 +98,6 @@ This container provides a complete development environment. You can:
 - ✅ **Modern XFCE desktop** instead of basic window manager
 - ✅ **Pre-installed Roblox Studio** ready for game development
 - ✅ **Firefox browser** for web access
+- ✅ **Virtual keyboard (Onboard)** for mobile/touch device support
 - ✅ **Automatic Windows component installation** (fonts, runtimes)
 - ✅ **Railway.com deployment ready**
