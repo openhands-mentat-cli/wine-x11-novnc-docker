@@ -47,15 +47,15 @@ EOF
 
 chmod +x "/root/Desktop/Virtual Keyboard.desktop"
 
-# Configure onboard virtual keyboard settings
+# Configure onboard virtual keyboard for smart auto-show/hide behavior
 mkdir -p /root/.config/onboard
 cat > "/root/.config/onboard/onboard.conf" << EOF
 [main]
 layout=Compact
 theme=Droid
 key-label-font=Ubuntu
-show-status-icon=True
-show-tooltips=True
+show-status-icon=False
+show-tooltips=False
 auto-show-enabled=True
 auto-hide-enabled=True
 docking-enabled=True
@@ -63,21 +63,35 @@ docking-edge=bottom
 window-state-sticky=True
 window-decoration=False
 force-to-top=True
+start-minimized=True
 
 [window]
-enable-inactive-transparency=False
-inactive-transparency=50.0
+enable-inactive-transparency=True
+inactive-transparency=20.0
 transparency=0.0
+window-state-sticky=True
 
 [keyboard]
 touch-input=scanning
 show-click-buttons=False
-sticky-behaviour=True
+sticky-behaviour=False
 audio-feedback-enabled=False
 
 [auto-show]
 enabled=True
-hide-on-key-press=True
+hide-on-key-press=False
+hide-on-focus-change=True
+reposition-method=0
+
+[auto-show.enabled-applications]
+.*=True
+
+[scanner]
+enabled=False
+
+[typing-assistance]
+auto-capitalization=False
+auto-correction=False
 EOF
 
 # Configure XFCE settings for a modern look
